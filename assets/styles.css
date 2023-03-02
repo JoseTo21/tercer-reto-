@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --DarkBlue: hsl(213, 20%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: font-family: 'Overpass', sans-serif;;
+}
+
+.container {
+    background-color: var(--VeryDarkBlue);
+    min-height: 100vh; /*PARA QUE EL FONDO OCUPE TODA LA PANTALLA*/
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background: rgb(37,45,55);
+    background: linear-gradient(0deg, rgba(37,45,55,1) 43%, rgba(53,68,87,1) 100%);
+    max-width: 375px;
+    padding: 2rem;
+    border-radius: 1rem;
+
+    /*DANDO ESPACIO ENTRE CONTENEDORES*/
+    display: grid;
+    gap: 1rem;
+
+}
+
+.card__img{
+    background-color: var(--DarkBlue);
+    /*CREANDO EL CIRCULO*/
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /*CIRCULO CREADO*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__titlle{
+    color: var(--White);
+}
+
+
+.card__paragraph{
+    color: var(--MediumGrey);
+    line-height: 1.6rem;
+}
+
+/*COLOCANDO UNO AL LADO DEL OTRO*/
+
+.card__rating {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+.card__rating-item {
+    background-color: var(--DarkBlue);
+    /*CREANDO EL CIRCULO*/
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /*CIRCULO CREADO*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    cursor: pointer
+}
+
+.card__rating-item:hover{
+    background-color: var(--Orange);
+}
+
+.card__rating-item:active{
+    background-color: var(--MediumGrey);
+}
+
+.card__rating-item p{
+    color: var(--LightGrey);
+    font-weight: 700;
+}
+
+.card__rating-item:hover p{
+    color: var(--White);
+}
+
+.card__btn{
+    padding: 1rem;
+    width: 100%;
+    font-weight: 700;
+    color: var(--White);
+    background-color: var(--Orange);
+    border: none;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: transform 0.5s, background-color 0.5s, color 0.5s, border 0.5s;
+    border: 2px solid transparent;
+}
+
+.card__btn:active {
+    transform: scale(1.05);
+    background-color: var(--White);
+    color: var(--Orange);
+    border: 2px solid var(--Orange);
+}
+
